@@ -53,7 +53,7 @@ function promptProduct(products, results) {
                 printSeperator()
                 promptProduct(products)
             } else {
-                let successMessage = `Congrats, you purchased ${product.stock_quantity} ${product.product_name} for $${product.price * response.quantity}!`
+                let successMessage = `Congrats, you purchased ${response.quantity} ${product.product_name} for $${product.price * response.quantity}!`
                 purchaseProduct(product.item_id, product.stock_quantity - response.quantity, successMessage)
             }
         }
@@ -84,6 +84,6 @@ function purchaseProduct(id, stockQuantityRemaining, successMessage) {
             printSeperator()
             console.log(successMessage)
             printSeperator()
-            getProducts()
+            connection.end()
         })
 }
