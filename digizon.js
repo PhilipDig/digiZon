@@ -51,7 +51,7 @@ function promptProduct(products, results) {
                 console.log(`Sorry, there are only ${product.stock_quantity} left in inventory.`)
                 console.log("Please try again")
                 printSeperator()
-                promptProduct(products)
+                connection.end()
             } else {
                 let successMessage = `Congrats, you purchased ${response.quantity} ${product.product_name} for $${product.price * response.quantity}!`
                 purchaseProduct(product.item_id, product.stock_quantity - response.quantity, successMessage)
