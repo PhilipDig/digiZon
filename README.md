@@ -12,3 +12,6 @@ Instructions:
 1. Use the provided schema.sql and seed.sql to create the database and seed it with products to sell!
 2. Perform an "npm install"
 3. Launch the application from the command line: "node digizon"
+
+Demo Video:
+![Alt Text](https://github.com/PhilipDig/digiZon/blob/master/digizonDemo.gif)
